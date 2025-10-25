@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header>
+    <div>My Portfolio</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="modeToggle" class="btn">Dark Mode</button>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Hi, I am <span style="color:tomato;">Vansh Gupta </span></h1>
+    <h2><span id="typing"></span></h2>
+    <p>Frontend Developer | HTML | CSS | JavaScript</p>
+    <button class="btn" onclick="downloadResume()">Download Resume</button>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="filter-btns">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('web')">Web</button>
+      <button onclick="filterProjects('app')">App</button>
+    </div>
+    <div class="projects" id="projectList">
+
+      <div class="card" data-category="web">
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="Portfolio Website">
+        <div class="card-content">
+          <h3>Portfolio Website</h3>
+          <p>A responsive portfolio showcasing my skills, projects, and contact information. Built using HTML, CSS, and JavaScript.</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="app">
+        <img src="https://codingartistweb.com/wp-content/uploads/2021/02/To-Do-list-small-01.png" alt="To-Do App">
+        <div class="card-content">
+          <h3>To-Do App</h3>
+          <p>A task management app with local storage support. Users can add, delete, and mark tasks as complete.</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="web">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="E-commerce Page">
+        <div class="card-content">
+          <h3>E-commerce Landing Page</h3>
+          <p>A clean, responsive landing page for an online store with product listings and CTA buttons.</p>
+        </div>
+      </div>
+
+      <div class="card" data-category="app">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Weather App">
+        <div class="card-content">
+          <h3>Weather App</h3>
+          <p>Fetches real-time weather data from an API and displays it with a clean, simple UI.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Your Name">
+      <input type="email" id="email" placeholder="Your Email">
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+<script src="script.js"></script>
+
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+</body>
+</html>
